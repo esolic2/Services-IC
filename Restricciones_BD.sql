@@ -6,6 +6,8 @@ FOR Descripcion
 
 --Ejemplo 2 --
 --Ejemplo 3 --
+--Ejemplo 2 --
+--Ejemplo 3 --
 ALTER TABLE Producto
 add constraint CHK_Cantidad Check(Cantidad > 10)
 
