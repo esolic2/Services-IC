@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI.csproj", "{6BD8378A-1EC7-42D4-8E32-95F5AFE9205D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebJenkins", "..\WebJenkins\WebJenkins.csproj", "{7252ACE7-743D-4D7C-AC0E-3845DFB8F894}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6BD8378A-1EC7-42D4-8E32-95F5AFE9205D} = {6BD8378A-1EC7-42D4-8E32-95F5AFE9205D}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6BD8378A-1EC7-42D4-8E32-95F5AFE9205D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BD8378A-1EC7-42D4-8E32-95F5AFE9205D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BD8378A-1EC7-42D4-8E32-95F5AFE9205D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BD8378A-1EC7-42D4-8E32-95F5AFE9205D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7252ACE7-743D-4D7C-AC0E-3845DFB8F894}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7252ACE7-743D-4D7C-AC0E-3845DFB8F894}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7252ACE7-743D-4D7C-AC0E-3845DFB8F894}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7252ACE7-743D-4D7C-AC0E-3845DFB8F894}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C23266AF-CC3B-49C0-9FF6-60292E4DBFF5}
+	EndGlobalSection
+EndGlobal

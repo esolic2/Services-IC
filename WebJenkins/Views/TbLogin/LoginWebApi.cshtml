@@ -1,0 +1,55 @@
+﻿@model WebJenkins.Models.mvcTbLoginModel
+@{
+    ViewBag.Title = "LoginWebApi";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+@using (Html.BeginForm("Autherize", "TbLogin", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+
+<div class="form-group-sm form-body form-group-sm">
+
+
+    @Html.ValidationSummary()
+    <div class="form-group form-group-sm">
+        <h2 class="text-primary text-center">Iniciar Sesion</h2>
+    </div>
+    <div class="form-group form-group-sm">
+        @Html.LabelFor(model => model.Usuario)
+        @Html.EditorFor(model => model.Usuario, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.Usuario)
+
+    </div>
+    <div class="form-group form-group-sm">
+        @Html.LabelFor(model => model.contraseña)
+        @Html.EditorFor(model => model.contraseña, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.contraseña)
+
+    </div>
+
+    <div>
+        <label class="field-validation-error">@Html.DisplayFor(model => model.loginErrorMessage)</label>
+    </div>
+
+    <br />
+    <br />
+    <input class="btn btn-success btn-pressure" id="BtnLogin" name="BtnLogin" type="submit" value="Login" />
+    <input class="btn btn-info btn-pressure" id="BtnReset" name="BtnReset" type="reset" value="Reset" />
+
+
+</div>    
+}
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+        <script>
+        $(function () {
+            var successMessage = '@TempData["SuccessMessage"]'
+            if (successMessage != '')
+                alertify.success(successMessage);
+        });
+
+        </script>
+    }

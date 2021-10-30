@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProyJenkinsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TbCapturaDeDatos">
+    <Key>
+      <PropertyRef Name="IdRegistro" />
+    </Key>
+    <Property Name="IdRegistro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DPI" Type="int" Nullable="false" />
+    <Property Name="PrimerNombre" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="SegundoNombre" Type="varchar" MaxLength="255" />
+    <Property Name="TercerNombre" Type="varchar" MaxLength="255" />
+    <Property Name="PrimerApellido" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="SegundoApellido" Type="varchar" MaxLength="255" />
+    <Property Name="ApellidoCasada" Type="varchar" MaxLength="255" />
+    <Property Name="Sexo" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="EstadoCivil" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Direccion" Type="text" Nullable="false" />
+    <Property Name="Telefono" Type="int" />
+    <Property Name="FechaNacimiento" Type="date" Nullable="false" />
+    <Property Name="Covid19Positivo" Type="bit" Nullable="false" />
+    <Property Name="DosisAplicada" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="TbLogin">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Usuario" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="contraseña" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ProyJenkinsModelStoreContainer">
+    <EntitySet Name="TbCapturaDeDatos" EntityType="Self.TbCapturaDeDatos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TbLogin" EntityType="Self.TbLogin" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
