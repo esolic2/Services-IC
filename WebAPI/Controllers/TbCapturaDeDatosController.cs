@@ -60,6 +60,7 @@ namespace WebAPI.Controllers
                 if (!TbCapturaDeDatosExists(id))
                 {
                     return NotFound();
+                    //Este es un cambio del dia 05/11/2021 21:32pm
                 }
                 else
                 {
